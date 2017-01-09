@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="description" content="">
+        <meta name="author" content="">
+		{% load staticfiles %}
+        <link rel="shortcut icon" href="http://webagate.com/demos/alia/onepage-vcard-resume-portfolio-website-template/img/ico/favicon.ico">
+        <title>Dhaval Simaria: At a Glance</title>
+        <!-- ALL STYLESHEETS -->
+        <link href="{%static 'personal/css/all-stylesheet.css'%}" rel="stylesheet">
+        <!-- ALL COLORED STYLESHEETS -->
+        <link rel="alternate stylesheet" type="text/css" href="{% static '/personal/css/bootstrap/bootstrap.min.css' %}" title="default">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/default.css' %}" title="default">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/blue.css' %}" title="blue">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/green.css' %}" title="green">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/red.css' %}" title="red">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/orange.css' %}" title="orange">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/yellow.css' %}" title="yellow">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/greyish-blue.css' %}" title="greyish-blue">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/purple.css' %}" title="purple">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/grey.css' %}" title="grey">
+        <link rel="alternate stylesheet" type="text/css" href="{% static 'personal/css/colors/mehroon.css' %}" title="mehroon">
+    </head>
+
+	<body>
+        <!-- PRELOADER STARTS
+            ========================================================================= --> 
+        <div id="preloader">
+            <div class="preloader">
+                <div class="cube1"></div>
+                <div class="cube2"></div>
+            </div>
+        </div>
+        <!-- PRELOADER Ends
+            ========================================================================= --> 
+		{% block body %}
+		{% endblock %}
+        
+	<!-- /.STYLE SWITCHER PANEL -->
+        <!-- JAVASCRIPTS STARTS
+            ========================================================================= --> 
+        <!-- Bootstrap --> 
+        <script src="{% static 'personal/js/jquery-1.11.0.min.js' %}"></script> 
+        <script src="{% static 'personal/js/bootstrap.min.js' %}"></script> 
+        <!-- Style Switcher --> 
+        <script src="{% static 'personal/js/styleswitcher/styleswitcher.js' %}" type="text/javascript"></script> 
+        <!-- Animation --> 
+        <script type="text/javascript" src="{% static 'personal/js/animation/jquery.appear.js' %}"></script> 
+        <!-- AJAX Contact Form --> 
+        <script type="text/javascript" src="{% static 'personal/js/contact/contact-form.js' %}"></script> 
+        <!-- Lightbox --> 
+        <script src="{% static 'personal/lightbox/ekko-lightbox.js' %}"></script> 
+        <!-- Isotope --> 
+        <script src="{% static 'personal/js/isotope/jquery.isotope.min.js' %}"></script> 
+        <script src="{% static 'personal/js/isotope/custom-isotope.js' %}"></script> 
+        <!-- Slider Revolution 4.x Scripts --> 
+        <script type="text/javascript" src="{% static 'personal/rs-plugin/js/jquery.themepunch.plugins.min.js' %}"></script> 
+        <script type="text/javascript" src="{% static 'personal/rs-plugin/js/jquery.themepunch.revolution.js' %}"></script> 
+        <script>
+            var revapi;
+            		jQuery(document).ready(function() {
+            
+            			   revapi = jQuery('.tp-banner').revolution(
+            				{
+            					delay:15000,
+            					startwidth:1170,
+            					startheight:500,
+            					hideThumbs:10,
+            					fullWidth:"off",
+            					fullScreen:"on",
+            					fullScreenOffsetContainer: "",
+            					hideCaptionAtLimit:400            					
+            				});
+            		});	//ready	
+        </script> 
+        <!-- Owl Carousel --> 
+        <script src="{% static 'personal/owl-carousel/owl-carousel/owl.carousel.js' %}"></script> 
+        <!-- Custom --> 
+        <script src="{% static 'personal/js/custom.js' %}"></script> 
+        <!-- Parallex --> 
+        <script src="{% static 'personal/js/parallex/script.js' %}"></script> 
+        <!-- ScrollTo --> 
+        <script src="{% static 'personal/js/nav/jquery.scrollTo.js' %}"></script> 
+        <script src="{% static 'personal/js/nav/jquery.nav.js' %}"></script> 
+        <!-- Sticky --> 
+        <script type="text/javascript" src="{% static 'personal/js/sticky/jquery.sticky.js' %}"></script> 
+        <!-- Donut Chart --> 
+        <script type="text/javascript" src="{% static 'personal/js/progress-bars/jquery.donutchart.js' %}"></script> 
+        <script>
+            $("#donutchart1").donutchart("animate");
+            $("#donutchart2").donutchart("animate");
+            $("#donutchart3").donutchart("animate");
+            $("#donutchart4").donutchart("animate");
+            $("#donutchart5").donutchart("animate");
+            $("#donutchart6").donutchart("animate");
+            $("#donutchart7").donutchart("animate");
+            $("#donutchart8").donutchart("animate");			
+        </script> 
+        <!-- Retina --> 
+        <script type="text/javascript" src="{% static 'personal/js/retina/retina.js' %}"></script>
+        <!-- FitVids -->
+        <script type="text/javascript" src="{% static 'personal/js/jquery.fitvids.js' %}"></script>
+	</body>
+</html>

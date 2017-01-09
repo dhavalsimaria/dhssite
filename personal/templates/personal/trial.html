@@ -1,0 +1,13 @@
+<html>
+	<head>
+		<title>Trial</title>
+	</head>
+	<body>
+		<h1>Form starts</h1>
+		<form role="form" action="" method="post">
+    	{% csrf_token %}
+			{{ form.as_p }}
+		</form>
+		<h1>Hi all.</h1>
+	</body>
+</html>
