@@ -3,6 +3,8 @@ from .forms import ContactForm
 import os
 from django.http import JsonResponse
 from django.http import HttpResponse
+import requests
+import json
 
 
 firstName = 'DHAVAL' 
@@ -53,4 +55,41 @@ def download(request):
 			return response	
 	else:
 		raise Http404
-	
+
+def SO(request):
+	uri="https://api.stackexchange.com/2.0/users/3957225?site=stackoverflow"
+	response = requests.get(uri)
+	Jresponse = response.text
+	data = json.loads(Jresponse)
+
+	reputation = data['items'][0][reputation]
+	gold = data['items'][0]['badge_counts']['gold']
+	silver = data['items'][0]['badge_counts']['silver']
+	bronze = data['items'][0]['badge_counts']['bronze']
+
+	print (r.status_code)
+	print (r.headers['content-type'])
+	print (Jresponse)
+	print ("SO Reputation: ", reputation)
+	print ("SO Gold: ", gold)
+	print ("SO Silver: ", silver)
+	print ("SO Bronze: ", bronze) 
+
+def AU(request):
+	uri = "https://api.stackexchange.com/2.0/users/185089?site=askubuntu"
+	response = requests.get(uri)
+	Jresponse = response.text
+	data = json.loads(Jresponse)
+
+	reputation = data['items'][0]['reputation']
+	gold = data['items'][0]['badge_counts']['gold']
+	silver = data['items'][0]['badge_counts']['silver']
+	bronze = data['items'][0]['badge_counts']['bronze']
+
+	print (response.status_code)
+	print (response.headers['content-type'])
+	print (Jresponse)
+	print ("SO Reputation: ", reputation)
+	print ("SO Gold: ", gold)
+	print ("SO Silver: ", silver)
+	print ("SO Bronze: ", bronze)
